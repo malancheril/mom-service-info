@@ -7,20 +7,50 @@
 <style>
   body {
     font-family: Georgia, 'Times New Roman', serif;
-    background: #E6D8CB;
+    background: #E6D8CB‎;
     color: #2b2b2b;
     margin: 0;
     padding: 0;
     line-height: 1.2;
   }
   .container {
-    max-width: 640px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 24px 80px;
   }
+  .main {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .photo {
+    flex: 0 0 auto;
+    width: 260px;
+  }
+  .photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .info {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
   header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
+  }
+  @media (max-width: 600px) {
+    .main {
+      flex-direction: column;
+      align-items: center;
+    }
+    .photo {
+      width: 220px;
+    }
+    header {
+      text-align: center;
+    }
   }
   header h1 {
     font-size: 1.9em;
@@ -53,6 +83,9 @@
   .label {
     font-weight: bold;
   }
+  .map-link {
+    color: #7a1f1f;
+  }
   .placeholder {
     color: #999;
     font-style: italic;
@@ -68,34 +101,45 @@
 <body>
 <div class="container">
 
-  <header>
-    <h1>Aleyamma Lukose</h1>
-    <p>August 16, 1939 &ndash; August 6, 2026</p>
-  </header>
+  <div class="main">
+    <div class="photo">
+      <img src="Aleyamma.jpg" alt="Aleyamma Lukose">
+    </div>
 
-  <hr>
+    <div class="info">
+      <header>
+        <h1>Aleyamma Lukose</h1>
+        <p>August 16, 1939 &ndash; August 6, 2026</p>
+      </header>
 
-  <section>
-    <h2>Wake</h2>
-    <p class="detail"><span class="label">Date:</span> August 21, 2026</p>
-    <p class="detail"><span class="label">Time:</span> 8:30 AM</p>
-    <p class="detail"><span class="label">Location:</span> Christ the King Knanaya Catholic Parish</p>
-    <p class="detail">13565 Webb Chapel Road, Farmers Branch, TX 75234</p>
-  </section>
+      <hr>
 
-  <section>
-    <h2>Funeral Mass</h2>
-    <p class="detail"><span class="label">Date:</span> August 21, 2026</p>
-    <p class="detail"><span class="label">Time:</span> 10:00 AM</p>
-    <p class="detail"><span class="label">Location:</span> Christ the King Knanaya Catholic Parish</p>
-    <p class="detail">13565 Webb Chapel Road, Farmers Branch, TX 75234</p>
-  </section>
+      <section>
+        <h2>Visitation</h2>
+        <p class="detail"><span class="label">Date:</span> August 21, 2026</p>
+        <p class="detail"><span class="label">Time:</span> 8:30 AM</p>
+        <p class="detail"><span class="label">Location:</span> Christ the King Knanaya Catholic Parish</p>
+        <p class="detail">13565 Webb Chapel Road, Farmers Branch, TX 75234</p>
+        <p class="detail"><a class="map-link" href="https://maps.app.goo.gl/gneNMH1B2WyYC57K6" target="_blank" rel="noopener">Map</a></p>
+      </section>
 
-  <section>
-    <h2>Burial Service</h2>
-    <p class="detail"><span class="label">Location:</span> The Rolling Oaks Memorial Center</p>
-    <p class="detail">400 S. Freeport Parkway, Suite 100, Coppell, TX 75019</p>
-  </section>
+      <section>
+        <h2>Funeral Service</h2>
+        <p class="detail"><span class="label">Date:</span> August 21, 2026</p>
+        <p class="detail"><span class="label">Time:</span> 10:00 AM</p>
+        <p class="detail"><span class="label">Location:</span> Christ the King Knanaya Catholic Parish</p>
+        <p class="detail">13565 Webb Chapel Road, Farmers Branch, TX 75234</p>
+        <p class="detail"><a class="map-link" href="https://maps.app.goo.gl/gneNMH1B2WyYC57K6" target="_blank" rel="noopener">Map</a></p>
+      </section>
+
+      <section>
+        <h2>Committal</h2>
+        <p class="detail"><span class="label">Location:</span> The Rolling Oaks Memorial Center</p>
+        <p class="detail">400 Freeport Parkway, Suite 100, Coppell, TX 75019</p>
+        <p class="detail"><a class="map-link" href="https://maps.app.goo.gl/eaVMfsbLgU66HUQk8" target="_blank" rel="noopener">Map</a></p>
+      </section>
+    </div>
+  </div>
 
   <footer>
     <p>Thank you for keeping our family in your thoughts and prayers.</p>
